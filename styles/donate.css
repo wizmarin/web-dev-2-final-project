@@ -1,0 +1,68 @@
+.donate_section h1 {
+    background-color: #273b49;
+    border: 0.1em solid rgb(237, 203, 36);
+    border-radius: 5em;
+    padding: 25px;
+}
+
+.flex_wrap_container {
+    display: flex;
+    column-gap: 5rem;
+    width:80%;
+}
+
+.main {
+    display: flex; 
+    justify-content: center;
+    padding-bottom: 2.5rem;
+}
+
+.anchor {
+    display: flex;
+    flex-direction: column;
+    height:41em;
+    justify-content: center;
+}
+
+.bank_transfer {
+    color:#F2EAE4;
+    background-color: #273b49;
+    padding: 25px;
+    height:22em;
+    font-size:1.2em;
+    line-height:35px;
+    border-radius: 1em;
+}
+
+h1 a {
+    text-decoration:none;
+    color:#F2EAE4;
+}
+
+h1:hover a {
+    color:rgb(237, 203, 36);
+}
+
+
+@media (max-width: 1199.98px) {
+    .flex_wrap_container {
+        display:flex;
+        flex-direction: column;
+    }
+
+    .anchor {
+        height:20em;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .bank_transfer {
+        font-size: 0.8em;
+        padding:15px;
+        height:30em;
+    }
+
+    .anchor {
+        height: 35em;
+    }
+}
