@@ -15,13 +15,35 @@ a {
     text-decoration: none;
 }
 
+h1 {
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    font-style: normal;
+    color: #273b49;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    text-align: center;
+}
+
+h3 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
 /* Utility classes */
-/*  Only with other selectors
-    ----------------------
-    .container
-    .white_space
-    ----------------------
-*/
 
 .flex_container {
     display: flex;
@@ -39,6 +61,12 @@ a {
 
 .half_width {
     width: 50%;
+}
+
+section.container {
+    padding: 5vw;
+    padding-top: 2.5vw;
+    padding-bottom: 2.5vw;
 }
 
 /* Header styles */
@@ -101,14 +129,267 @@ header {
     color: #273b49;
 }
 
-/* Components */
+/* 1 - Slider */
+.slider_wrapper {
+    position: relative;
+    max-width: 90vw;
+    height: fit-content;
+    margin: 0 auto;
+}
 
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    border-radius: 1.5rem;
+    column-gap: 2rem;
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
 
+/* Hide scrollbar for Chrome, Safari and Opera */ 
+.slider::-webkit-scrollbar {
+    display: none;
+}
 
-@media (max-width: 1399.98px) {
+.slider > .slide {
+    flex: 1 0 100%;
+    height: 600px;
+    border-radius: 1.5rem;
+    scroll-snap-align: center;
+}
 
+.slider_nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: -1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider_nav > a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #273b49;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+
+.slider_nav a:hover {
+    opacity: 1;
+}
+
+/* FAQ section */
+
+#faq .flex_container {
+    color: #F2EAE4;
+    background-color: #273b49;
+    border-radius: 1.5rem;
+}
+
+#faq .slider_wrapper {
+    max-width: 50vw;
+}
+
+#faq .slider {
+    width: 100%;
+}
+
+#faq .slider > .slide {
+    width: 100%;
+    height: 400px;
+    padding: 15px;
+    background-color: #39566A;
+}
+
+#faq .text > p,
+#faq .text > ol {
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 18px;
+    font-style: normal;
+    padding: 10px;
+    padding-bottom: 5px;
+}
+
+#faq .text > ol {
+    padding-left: 30px;
+}
+
+#faq ol > li {
+    padding-top: 10px;
+}
+
+#faq .text a {
+    color: #989898;
+}
+
+#faq .text a:hover {
+    color: #F2EAE4;
+}
+
+#faq .slide_heading_background {
+    padding: 15px;
+    border-radius: 1rem;
+    background-color: #273b49;
+}
+
+#faq .slide_heading_background h2 {
+    text-align: left;
+}
+
+#faq .slider_nav {
+    flex-direction: column;
+    width: 40vw;
+    height: 400px;
+    padding: 15px;
+    position: static;
+    transform: none;
+    overflow-x: auto;
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */ 
+#faq .slider_nav::-webkit-scrollbar {
+    display: none;
+}
+
+#faq .slider_nav > a {
+    width: 100%;
+    height: 100%;
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 18px;
+    font-style: normal;
+    padding: 10px;
+    color: #F2EAE4;
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    height: fit-content;
+    background-color: #273b49;
+    font-family: "Spectral", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    color: #F2EAE4;
+}
+
+footer > .flex_container_row {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    justify-content: space-between;
+}
+
+footer .flex_container_row > .flex_container_col:first-child {
+    width: 250px;
+    justify-content: space-between;
+}
+
+footer .flex_container_row > .flex_container_col {
+    width: 400px;
+}
+
+footer .flex_container_row > .flex_container_col:last-child h3 {
+    padding-bottom: 1.5rem;
+}
+
+footer .flex_container_col > .footer_links {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .flex_container_col > .donate_button {
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #F2EAE4;
+    border-radius: 1rem;
+}
+
+footer .donate_button > a {
+    margin-right: 0.5rem;
+    color: #273b49;
+}
+
+footer a {
+    color: #F2EAE4;
+}
+
+footer > .copyrights {
+    font-size: 18px;
+    padding: 0.5rem;
+    background-color: #39566A;
+    text-align: center;
+}
+
+@media (max-width: 1199.98px) {
+    /* 1 - Slider */
+    .slider_wrapper{
+        max-width: 80vw;
+    }
+
+    .slider > .slide {
+        height: fit-content;
+    }
+
+    /* FAQ section */
+
+    #faq .flex_container {
+        max-width: 80vw;
+        margin: 0 auto;
+    }
+
+    #faq .slider_nav {
+        height: 450px;
+    }
+
+    #faq .slider_wrapper {
+        max-width: 45vw;
+    }
+
+    #faq .slider > .slide {
+        height: 450px;
+    }
 }
 
 @media (max-width: 991.98px) {
+    /* 1 - Slider */
+    .slider_wrapper{
+        max-width: 90vw;
+    }
+
+    /* FAQ section */
     
+    #faq .flex_container {
+        max-width: 90vw;
+        margin: 0 auto;
+    }
+
+    #faq .slider_nav {
+        height: 500px;
+    }
+
+    #faq .slider_wrapper {
+        max-width: 50vw;
+    }
+
+    #faq .slider > .slide {
+        height: 500px;
+    }
 }

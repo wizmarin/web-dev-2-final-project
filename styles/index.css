@@ -6,17 +6,19 @@ section#hero {
 }
 
 #hero .background {
-    width: inherit;
+    width: 100vw;
     height: inherit;
     position: absolute;
-    background-image: url(../images/Drones.avif);
-    background-repeat: no-repeat;
     background-size: 100vw;
     mask-image: url(../images/Vector-2.png);
     mask-repeat: no-repeat;
     mask-size: 750px;
-    mask-position: 25% 30%;
+    mask-position: 25% 50%;
     z-index: 0;
+}
+
+#hero .background img {
+    width: 95vw;
 }
 
 #hero .content {
@@ -111,7 +113,97 @@ section#hero {
     color: #273b49;
 }
 
+/* Funds section */
+
+#funds .slide .slide_content_wrapper {
+    flex: 1 0 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.5rem;
+    background-color: #273b49;
+}
+
+#funds .slide_img {
+    width: 50%;
+    height: 100%;
+    padding: 15px;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+}
+
+#funds .text .slide_img {
+    display: none;
+}
+
+#funds .slide_img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.5rem;
+    object-fit: cover;
+}
+
+#funds .slide_content {
+    width: 50%;
+    padding: 15px;
+    border-radius: 1.5rem;
+    color: #F2EAE4;
+    background-color: #39566A;
+    position: relative;
+    justify-content: space-between;
+}
+
+#funds .slide_content p {
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 18px;
+    font-style: normal;
+    padding: 10px;
+    padding-bottom: 5px;
+}
+
+#funds .slide_content ul li {
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 18px;
+    font-style: normal;
+    padding: 10px;
+    padding-bottom: 5px;
+    list-style-position: inside;
+}
+
+#funds .text .slide_heading_background {
+    border-radius: 1rem;
+    padding: 10px;
+    background-color: #273b49;
+}
+
+#funds .slide_heading_background h3 {
+    text-align: center;
+}
+
+#funds .slide_content .donate_button {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background-color: #F2EAE4;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+#funds .donate_button a {
+    color: #273b49;
+    padding-right: 5px;
+}
+
 @media (max-width: 1199.98px) {
+    
+    /* Hero section */
+    
     #hero .background {
         mask-size: 600px;
         mask-position: 20% 30%;
@@ -130,9 +222,47 @@ section#hero {
     #hero .content .box.flex_container {
         top: 190px;
     }
+
+    /* Funds section */
+
+    #funds .slide .slide_content_wrapper {
+        flex: 1 0 100%;
+    }
+
+    #funds .slide_content_wrapper .slide_img {
+        display: none;
+        padding: 10px;
+    }
+
+    #funds .text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #funds .text .slide_img {
+        display: inline-block;
+        height: 50%;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #funds .slide_img img {
+        width: 100%;
+        height: 100%;
+        border-radius: 1.5rem;
+        object-fit: cover;
+    }
+
+    #funds .slide_content_wrapper .slide_content {
+        width: 100%;
+    }
 }
 
 @media (max-width: 991.98px) {
+    
+    /* Hero section */
+
     section#hero {
         height: 700px;
     }
